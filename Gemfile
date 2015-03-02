@@ -13,5 +13,9 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'rack-cors', require: 'rack/cors'
