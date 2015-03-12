@@ -11,6 +11,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pry-rails'
 end
 
 group :production do
@@ -19,3 +20,4 @@ end
 
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'rack-cors', require: 'rack/cors'
+gem 'bcrypt-ruby'

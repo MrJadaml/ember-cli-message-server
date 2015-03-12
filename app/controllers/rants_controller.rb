@@ -10,4 +10,10 @@ class RantsController<ApplicationController
     render json: rant
   end
 
+  def update
+    rant = Rant.find(params[:id])
+    rant.update(params.require(:rant).permit(:title, :body))
+    render json: rant
+  end
+
 end
