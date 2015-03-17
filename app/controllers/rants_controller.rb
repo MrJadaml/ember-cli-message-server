@@ -2,7 +2,13 @@ class RantsController<ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    render json: Rant.all
+    if params[:query]
+      query = params[:query]
+      rants = Rant.where("title like ? OR body like ?", "%#{ query }%", "%#{ query }%")
+    else
+      rants = Rant.all
+    end
+    render json: rants
   end
 
   def create
