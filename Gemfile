@@ -6,6 +6,7 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jwt', '~> 1.4.1'
 
 group :development, :test do
   gem 'byebug'

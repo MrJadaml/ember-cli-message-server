@@ -26,3 +26,38 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+Auth Runthrough
+
+sessions controller:
+#create -> send back token through json
+  - pass token back to ember
+  play in postman with this
+
+#destroy -> `session.clear`
+
+#generate_auth_token(user)
+  - jwt gem '1.4.1'
+  - use their github for the JWT.encode(payload, 'secret') code
+    - look into what 'secret' is
+
+these actions are for bcrypt (check out gcamp)
+
+find user by params
+.authenticate
+set a session to user.id
+
+
+Postman
+GET Header -> Authorization x some_token
+
+application controller:
+
+#require_login
+  unless current_user
+
+#current_user
+ request.header[auth]
+ decode JWT ... nil, false)
+ find User by id: decoded_auth_token...
