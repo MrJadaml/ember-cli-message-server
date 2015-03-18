@@ -1,5 +1,3 @@
-require_relative "../../lib/auth/auth_token"
-
 class User < ActiveRecord::Base
   has_secure_password
 
