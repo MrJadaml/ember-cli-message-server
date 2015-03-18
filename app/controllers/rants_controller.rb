@@ -1,5 +1,5 @@
 class RantsController<ApplicationController
-
+  skip_before_filter :authenticate_request
   skip_before_filter :verify_authenticity_token
 
   def index

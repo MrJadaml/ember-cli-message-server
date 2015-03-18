@@ -33,7 +33,7 @@ private
   end
 
   def decoded_auth_token
-    @decoded_auth_token ||= AuthToken.decode(http_auth_header_content)
+    @decoded_auth_token ||= Auth::Token.decode(http_auth_header_content)
   end
 
   def auth_token_expired?
